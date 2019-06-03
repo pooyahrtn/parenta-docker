@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: ./parenta-core
+    container_name: parenta-core
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./parenta-core:/usr/src/app/
+    ports:
+      - "8321:8000"
+  
